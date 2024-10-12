@@ -3,6 +3,10 @@
     <div class="recipe-selection__button">
       <button>Показать рецепт</button>
     </div>
+
+    <div class="recipe-selection__content">
+
+    </div>
   </div>
 </template>
 
@@ -22,8 +26,9 @@ defineComponent({
     display: flex;
     justify-content: center;
 
+    user-select: none;
     button {
-      font-size: clamp(1rem, 3vw, 3rem);
+      font-size: clamp(1rem, 3vw, 2.5rem);
       padding: clamp(1rem, 3vw, 3rem);
 
       text-decoration: clamp(1px, 2px, 10px) underline;
@@ -34,13 +39,19 @@ defineComponent({
       color: #00ffa6;
 
       cursor: pointer;
-      
+
       transition: background-color 0.7s;
 
       &:hover {
         background-color: #00ffa61f;
       }
     }
+
+
+  }
+
+  &__content {
+
   }
 }
 </style>
