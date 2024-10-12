@@ -7,9 +7,7 @@
         Сервис помогает вам выбрать то, что поесть, когда у вас закончились
         идеи.
       </p>
-      <p>
-        Тыкаете на кнопку - сайт предлагает вам блюдо и советует рецепт
-      </p>
+      <p>Тыкаете на кнопку - сайт предлагает вам блюдо и советует рецепт</p>
     </div>
   </div>
 
@@ -22,16 +20,27 @@ import RecipeSelection from "./components/RecipeSelection.vue"
 
 <style scoped lang="scss">
 .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   &__text {
-    font-size: 6rem;
+    font-size: clamp(3rem, 8vw, 6rem);
   }
 
   &__description {
-    display: grid;
-    justify-items: start;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 80%;
+
+    text-align: left;
+    
     p {
-      font-size: 16px;
+      font-size: clamp(10px, 1.5vw, 18px);
+
+      padding: 0 10px;
       margin: 0;
     }
   }
