@@ -45,9 +45,9 @@ defineComponent({
     user-select: none;
     button {
       font-size: clamp(1rem, 3vw, 2rem);
-      padding: clamp(1rem, 3vw, 2rem);
+      padding: clamp(1rem, 3vw, 1.7rem);
 
-      text-decoration: clamp(1px, 2px, 10px) underline;
+      // text-decoration: clamp(1px, 2px, 10px) underline;
       border: 2px solid #00ffa6;
       border-radius: 12px;
 
@@ -74,17 +74,24 @@ defineComponent({
     span {
       font-size: clamp(1rem, 3vw, 2rem);
       font-weight: 600;
+
+      margin-bottom: 10px;
     }
 
     img {
-      width: 70%;
+      width: 60%;
       height: auto;
+      margin-bottom: 20px;
     }
 
     a {
-      font-size: clamp(1rem, 3vw, 2rem);
+      font-size: 20px;
       text-decoration: none;
       color: #00ffa6;
+
+      &:hover {
+        color: #9bfbda;
+      }
     }
   }
 }

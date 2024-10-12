@@ -26,6 +26,8 @@ import RecipeSelection from "./components/RecipeSelection.vue"
 
   &__text {
     font-size: clamp(3rem, 8vw, 6rem);
+    color: #00ffa6;
+    user-select: none;
   }
 
   &__description {
@@ -38,7 +40,7 @@ import RecipeSelection from "./components/RecipeSelection.vue"
     text-align: left;
     
     p {
-      font-size: clamp(10px, 1.5vw, 18px);
+      font-size: clamp(12px, 1.5vw, 18px);
 
       padding: 0 10px;
       margin: 0;
