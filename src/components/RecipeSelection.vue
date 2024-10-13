@@ -7,14 +7,11 @@
     <div class="recipe-selection__content">
       <span>{{ randomRecipe.name }}</span>
 
+      <!-- <img :src="randomRecipe.image" :alt="randomRecipe.name"> -->
       <img
         src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
         :alt="randomRecipe.name"
       />
-
-      <a :href="randomRecipe.url">Перейти к рецепту</a>
-
-      <!-- <img :src="randomRecipe.image" :alt="randomRecipe.name"> -->
     </div>
   </div>
 </template>
@@ -23,8 +20,8 @@
 import { defineComponent, ref } from "vue"
 import { recipes } from "../data/food.js"
 
+// функция для отоброжения нового рецепта
 const randomRecipe = ref(recipes[Math.floor(Math.random() * recipes.length)])
-
 function showNewRecipe() {
   randomRecipe.value = recipes[Math.floor(Math.random() * recipes.length)]
 }
@@ -59,7 +56,7 @@ defineComponent({
       transition: background-color 0.7s;
 
       &:hover {
-        background-color: #00ffa61f;
+        background-color: #00ffa649;
       }
     }
   }
@@ -81,7 +78,7 @@ defineComponent({
     img {
       width: 60%;
       height: auto;
-      margin-bottom: 20px;
+      // margin-bottom: 20px;
     }
 
     a {
