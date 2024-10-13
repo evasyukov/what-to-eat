@@ -7,11 +7,17 @@
     <div class="recipe-selection__content">
       <span>{{ randomRecipe.name }}</span>
 
-      <!-- <img :src="randomRecipe.image" :alt="randomRecipe.name"> -->
-      <img
+      <img :src="randomRecipe.image" :alt="randomRecipe.name" />
+      <div class="attribution">
+        <span
+          >Все изображения взяты с сайта &nbsp;
+          <a href="http://www.freepik.com/">Freepik</a>
+        </span>
+      </div>
+      <!-- <img
         src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
         :alt="randomRecipe.name"
-      />
+      /> -->
     </div>
   </div>
 </template>
@@ -40,6 +46,7 @@ defineComponent({
     justify-content: center;
 
     user-select: none;
+
     button {
       font-size: clamp(1rem, 3vw, 2rem);
       padding: clamp(1rem, 3vw, 1.7rem);
@@ -76,18 +83,33 @@ defineComponent({
     }
 
     img {
-      width: 60%;
+      // width: 500px;
+      width: clamp(300px, 50vw, 500px);
       height: auto;
       // margin-bottom: 20px;
     }
 
-    a {
-      font-size: 20px;
-      text-decoration: none;
-      color: #00ffa6;
+    // a {
+    //   font-size: 20px;
+    //   text-decoration: none;
+    //   color: #00ffa6;
 
-      &:hover {
-        color: #9bfbda;
+    //   &:hover {
+    //     color: #9bfbda;
+    //   }
+    // }
+
+    .attribution {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+
+      span {
+        font-size: 12px;
+      }
+      a {
+        font-size: 12px;
+        color: #00ffa6;
       }
     }
   }
