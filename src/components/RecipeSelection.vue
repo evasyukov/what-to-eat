@@ -86,6 +86,8 @@ defineComponent({
       // width: 500px;
       width: clamp(300px, 50vw, 500px);
       height: auto;
+
+      animation: fadeIn 2s;
       // margin-bottom: 20px;
     }
 
@@ -112,6 +114,16 @@ defineComponent({
         color: #00ffa6;
       }
     }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 </style>
