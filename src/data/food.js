@@ -82,12 +82,12 @@ export const recipes = [
       "https://img.freepik.com/free-photo/top-view-baked-liver-onion-plate-pine-tree-branch-salt-pepper-garlic_140725-99819.jpg?t=st=1728800379~exp=1728803979~hmac=1ad368160bcd142221a5006752df73cd3a19aeea8638b449d624bf9d77ce915c&w=1380",
     url: "url",
   },
-  {
-    name: "Чизкейк с клубникой",
-    image:
-      "https://img.freepik.com/premium-photo/slice-delicious-raspberry-cheesecake-resting-blue-plate_267395-3356.jpg?w=740",
-    url: "url",
-  },
+  // {
+  //   name: "Чизкейк с клубникой",
+  //   image:
+  //     "https://img.freepik.com/premium-photo/slice-delicious-raspberry-cheesecake-resting-blue-plate_267395-3356.jpg?w=740",
+  //   url: "url",
+  // },
   {
     name: "Роллы с лососем и авокадо",
     image:

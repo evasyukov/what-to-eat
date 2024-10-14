@@ -4,7 +4,7 @@
       <button @click="showNewRecipe">Показать блюдо</button>
     </div>
 
-    <div class="recipe-selection__content" :class="{ update: isUpdated }">
+    <div class="recipe-selection__content" >
       <span>{{ randomRecipe.name }}</span>
 
       <img :src="randomRecipe.image" :alt="randomRecipe.name" />
@@ -26,18 +26,10 @@
 import { defineComponent, ref } from "vue"
 import { recipes } from "../data/food.js"
 
-// функция для плавности
-const isUpdated = ref(false)
-
 // функция для отоброжения нового рецепта
 const randomRecipe = ref(recipes[Math.floor(Math.random() * recipes.length)])
 function showNewRecipe() {
   randomRecipe.value = recipes[Math.floor(Math.random() * recipes.length)]
-
-  isUpdated.value = true
-  setTimeout(() => {
-    isUpdated.value = false
-  }, 5000)
 }
 
 defineComponent({
@@ -59,7 +51,6 @@ defineComponent({
       font-size: clamp(1rem, 3vw, 2rem);
       padding: clamp(1rem, 3vw, 1.7rem);
 
-      // text-decoration: clamp(1px, 2px, 10px) underline;
       border: 2px solid #00ffa6;
       border-radius: 12px;
 
@@ -97,12 +88,10 @@ defineComponent({
     }
 
     img {
-      // width: 500px;
       width: clamp(300px, 50vw, 500px);
       height: auto;
 
       animation: fadeIn 2s;
-      // margin-bottom: 20px;
     }
 
     // a {
