@@ -12,6 +12,7 @@
   </div>
 
   <RecipeSelection />
+
   <button class="to-recipe" @click="isShow = !isShow">Перейти к рецепту</button>
 
   <div class="modal-overlay" v-if="isShow">
@@ -19,8 +20,6 @@
       <Url :close="closeModal" />
     </div>
   </div>
-
-  <!-- <Url v-if="isShow "/> -->
 </template>
 
 <script setup>
